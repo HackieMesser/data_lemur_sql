@@ -16,4 +16,7 @@ Write a query to return the page IDs of all the Facebook pages that don't have a
 
 #WIP
 
-SELECT * FROM pages as pages join page_likes as likes on  pages.page_id=likes.page_id 
+SELECT pages.page_id
+FROM pages as pages left outer join page_likes as likes on pages.page_id=likes.page_id 
+where likes.page_id is NULL
+group by pages.page_id
