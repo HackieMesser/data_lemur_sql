@@ -6,3 +6,14 @@ You want to find candidates who are proficient in Python, Tableau, and PostgreSQ
 SELECT distinct candidate_id, count(skill) as skill_count FROM candidates 
 where skill in ('Python','Tableau','PostgreSQL') group by candidate_id
 having count(skill) =3 ORDER BY candidate_id ASC;
+
+
+
+
+
+Assume you are given the tables below about Facebook pages and page likes. 
+Write a query to return the page IDs of all the Facebook pages that don't have any likes. The output should be in ascending order.
+
+#WIP
+
+SELECT * FROM pages as pages join page_likes as likes on  pages.page_id=likes.page_id 
